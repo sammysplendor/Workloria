@@ -1,10 +1,12 @@
+import { ArrowRight } from "lucide-react";
 import {
   Card,
+  CardAction,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "./ui/card";
+import Link from "next/link";
 
 type Job = {
   id: string | number;
@@ -47,11 +49,18 @@ const JobListings = ({ jobs }: jobListingsProps) => {
                 {job.city}, {job.state}
               </small>
             </CardHeader>
-            <CardContent className="flex flex-col gap-2">
+            <CardContent className="flex justify-between items-center gap-2">
               <h2>
                 {job.experience} | {job.workplace}
               </h2>
-              <CardDescription>{job.description}</CardDescription>
+              <CardAction className="text-blue-700">
+                <Link
+                  href={`/jobs/${job.id}`}
+                  className="inline-flex items-center gap-2 transition-transform duration-200 hover:translate-x-1"
+                >
+                  View detail <ArrowRight size={18} />
+                </Link>
+              </CardAction>
             </CardContent>
           </Card>
         </div>
