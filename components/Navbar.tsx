@@ -24,10 +24,10 @@ const Navbar = () => {
           <div className="flex">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/workloria_logo.png"
                 alt="Workloria logo"
-                width={40}
-                height={40}
+                width={50}
+                height={50}
               />
               <span className="ml-2 text-xl font-semibold text-gray-900">
                 Workloria
