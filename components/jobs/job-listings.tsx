@@ -5,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "../ui/card";
 import Link from "next/link";
 
 type Job = {

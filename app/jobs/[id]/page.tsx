@@ -12,7 +12,8 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { connection } from "next/server";
 import { Suspense } from "react";
-import { Button } from "@/components/ui/button";
+
+import ApplyButton from "@/components/ApplyButton";
 
 const JobDetailPage = async ({
   params,
@@ -52,6 +53,7 @@ const JobDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!jobDetail) {
     notFound();
   }
+
   return (
     <Card className="w-full shadow-md">
       <CardHeader className="">
@@ -72,12 +74,7 @@ const JobDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
       </CardContent>
 
       <CardFooter>
-        <Button
-          type="submit"
-          className="w-full bg-blue-600 text-white hover:bg-blue-800 mt-6"
-        >
-          Apply
-        </Button>
+        <ApplyButton jobId={jobId} />
       </CardFooter>
     </Card>
   );

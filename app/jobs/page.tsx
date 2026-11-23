@@ -1,6 +1,6 @@
-import JobSearchForm from "@/components/Job-search-form";
+import JobSearchForm from "@/components/jobs/Job-search-form";
 import { Suspense } from "react";
-import JobResults from "@/components/job-results";
+import JobResults from "@/components/jobs/job-results";
 
 type JobsPageProps = {
   searchParams: Promise<{

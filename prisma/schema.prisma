@@ -107,7 +107,7 @@ model Job {
   postedAt     DateTime        @default(now())
   postedById   String
   applications Application[]
-  postedBy     User            @relation("PostedJobs", fields: [postedById], references: [id])
+  postedBy     User            @relation("PostedJobs", fields: [postedById], references: [id], onDelete: Cascade)
 }
 
 model Application {
@@ -116,8 +116,8 @@ model Application {
   userId    String
   status    String   @default("PENDING")
   appliedAt DateTime @default(now())
-  job       Job      @relation(fields: [jobId], references: [id])
-  user      User     @relation(fields: [userId], references: [id])
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([jobId, userId])
 }
