@@ -1,10 +1,13 @@
 import Hero from "@/components/home/Hero";
 import FeaturedJobs from "@/components/home/FeaturedJobs";
 import { Suspense } from "react";
+import HowItWorks from "@/components/home/HowItWorks";
+import CTA from "@/components/home/CTA";
+import Footer from "@/components/home/Footer";
 
 export default async function Home() {
   return (
-    <main className="w-full min-h-dvh flex flex-col gap-12 mx-auto px-4 sm:px-6">
+    <main className="w-full min-h-dvh flex flex-col gap-12 sm:gap-16 mx-auto pt-8">
       {/* ===== Hero Section ===== */}
       <Hero />
 
@@ -16,6 +19,15 @@ export default async function Home() {
       >
         <FeaturedJobs />
       </Suspense>
+
+      {/* ===== How It Works Section ===== */}
+      <HowItWorks />
+
+      {/* ===== CTA Section ===== */}
+      <CTA />
+
+      {/* ===== Footer ===== */}
+      <Footer />
     </main>
   );
 }

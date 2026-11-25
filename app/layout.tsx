@@ -23,13 +23,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
-        <div className="min-h-screen">
+        <div className="min-h-screen overflow-x-hidden">
           <Navbar />
 
-          <main className="container mx-auto px-4 py-8">
+          <main className="container mx-auto pt-8">
             {children}
 
             <Toaster position="bottom-right" richColors />

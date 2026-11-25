@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-4 mt-6 items-center sm:items-start">
+    <section className="w-full flex flex-col gap-4 mt-6 items-center sm:items-start px-4 sm:px-8 py-8">
       <span className="text-sm text-slate-400 font-medium py-4">
         YOUR CAREER JOURNEY BEGINS HERE
       </span>
@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="flex flex-col w-full sm:flex-row gap-4 items-center justify-start sm:w-fit">
             <Link
               href="/jobs"
-              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors bg-blue-600 hover:bg-blue-800 w-full sm:w-fit"
+              className="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm text-white font-medium transition-colors bg-blue-600 hover:bg-blue-800 w-full sm:w-fit"
             >
               Explore Jobs
             </Link>
